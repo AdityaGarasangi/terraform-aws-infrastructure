@@ -1,0 +1,16 @@
+# --- aws provider ---
+region = "us-east-1"
+
+# --- s3 bucket ---
+state_bucket_name = "terraform_aws_infra_00_state_bucket"
+state_bucket_tag = {
+  Project   = "Terraform AWS Infrastructure"
+  ManagedBy = "Terraform"
+}
+
+# --- dynamoDB ---
+locks_table_name = "terraform_state_locks"
+locks_table_tag = {
+  Project   = "Terraform AWS Infrastructure"
+  ManagedBy = "Terraform"
+}
