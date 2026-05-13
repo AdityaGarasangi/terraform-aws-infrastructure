@@ -1,0 +1,22 @@
+# --- aws provider ---
+region = "us-east-1"
+
+# --- oidc provider ---
+oidc_tags = {
+  Project   = "Terraform AWS Infrastructure"
+  ManagedBy = "Terraform"
+}
+
+# --- dev role ---
+dev_role_name = "github-actions-dev"
+
+# --- prod role ---
+prod_role_name = "github-actions-prod"
+
+# --- permission ---
+state_bucket_arn = ""
+lock_table_arn   = ""
+
+# --- github creds ---
+github_user = ""
+github_repo = ""

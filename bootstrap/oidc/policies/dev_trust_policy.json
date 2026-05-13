@@ -1,0 +1,20 @@
+{
+    "version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "sts:AssumeRoleWithWebIdentity",
+            "Princple": {
+                "Federated": "${github_provider_arn}"
+            },
+            "Condition": {
+                "StringEquals": {
+                    "token.actions.githubusercontent.com:aud": "sts.amazonaws.com"
+                },
+                "StringLike": {
+                    "token.actions.githubusercontent.com:sub": "repo${github_user}/${github_repo}:ref:refs/heads/develop"
+                }
+            }
+        }
+    ]
+}
